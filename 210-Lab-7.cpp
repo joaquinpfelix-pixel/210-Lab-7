@@ -5,7 +5,8 @@ using namespace std;
 
 
 
-
+string* reverseArray(string* arr, const int size);
+void displayArray(string* arr, const int size);
 
 
 int main() 
@@ -21,12 +22,15 @@ int main()
     *(names + 4) = "Junio";
 
     cout << "Original array: ";
-    
+    displayArray(names, ARRAY_SIZE);
 
+    reverseArray(names, ARRAY_SIZE);
 
+    cout << "Reversed array: ";
+    dispalyArray(names, ARRAY_SIZE);
 
-
-
+    delete[] names;
+    return 0;
 }
 
 string* reverseArray(string* arr, const int size)
