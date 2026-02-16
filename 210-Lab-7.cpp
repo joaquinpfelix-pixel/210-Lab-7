@@ -27,7 +27,7 @@ int main()
     reverseArray(names, ARRAY_SIZE);
 
     cout << "Reversed array: ";
-    dispalyArray(names, ARRAY_SIZE);
+    displayArray(names, ARRAY_SIZE);
 
     delete[] names;
     return 0;
@@ -35,7 +35,7 @@ int main()
 
 string* reverseArray(string* arr, const int size)
 {
-    for (int i = 0; i< size; i++)
+    for (int i = 0; i< size / 2; i++)
     {
         string temp = *(arr + i);
         *(arr + i) = *(arr + size - 1 - i);
